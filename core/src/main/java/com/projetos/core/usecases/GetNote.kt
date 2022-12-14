@@ -4,5 +4,5 @@ import com.projetos.core.repository.NoteRepository
 
 class GetNote(private val noteRepository: NoteRepository) {
 
-    suspend fun invoke(id: Long) = noteRepository.getNote(id)
+    suspend operator fun invoke(id: Long) = noteRepository.getNote(id)
 }

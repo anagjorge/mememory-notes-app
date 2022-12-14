@@ -5,19 +5,19 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.projetos.core.data.Note
 
-@Entity(tableName="note")
+@Entity(tableName = "note")
 data class NoteEntity(
-    val title: String,
-    val content: String,
+    var title: String,
+    var content: String,
 
     @ColumnInfo(name = "creation_date")
-    val creationTime: Long,
+    var creationTime: Long,
 
     @ColumnInfo(name = "update_time")
-    val updateTime: Long,
+    var updateTime: Long,
 
     @PrimaryKey(autoGenerate = true)
-    val id: Long = 0L
+    var id: Long = 0L
 ) {
     companion object{
         fun fromNote(note: Note) = NoteEntity(note.title, note.content, note.creatrionTime, note.updateTime)    }
