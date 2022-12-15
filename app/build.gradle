@@ -44,6 +44,7 @@ dependencies {
     implementation project(':core')
     def nav_version = "2.3.0-alpha04"
     def room_version = "2.4.2"
+    def daggerVersion = "2.44.2"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
