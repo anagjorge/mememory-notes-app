@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/noteLayout"
     android:layout_width="match_parent"
     android:layout_height="@dimen/layout_height"
@@ -37,10 +38,22 @@
         <TextView
             android:id="@+id/tv_date"
             style="@style/Detail"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Last updated"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_wordCount"
+            style="@style/Detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Word: "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
