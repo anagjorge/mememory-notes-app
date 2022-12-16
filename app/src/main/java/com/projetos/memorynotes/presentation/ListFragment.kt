@@ -38,7 +38,7 @@ class ListFragment : Fragment(), ListAction {
             adapter = notesListAdapter
         }
         addNote.setOnClickListener { goToNoteDetails() }
-        viewModel = ViewModelProvider(this).get(ListViewModel::class.java)
+        viewModel = ViewModelProvider(this)[ListViewModel::class.java]
         observeViewModel()
     }
 

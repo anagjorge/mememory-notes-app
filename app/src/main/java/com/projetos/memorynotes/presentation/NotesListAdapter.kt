@@ -43,7 +43,7 @@ class NotesListAdapter(var notes: ArrayList<Note>, val actions: ListAction) :
 
             val sdf = SimpleDateFormat("MMM dd, HH:mm:ss")
             val resultDate = Date(note.updateTime)
-            noteDate.text = "Las updted: ${sdf.format(resultDate)}"
+            noteDate.text = "Last updated: ${sdf.format(resultDate)}"
 
             layout.setOnClickListener{ actions.onClick(note.id) }
 
